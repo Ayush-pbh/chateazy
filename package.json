@@ -1,19 +1,25 @@
 {
-  "name": "chateazy-server",
-  "version": "1.0.0",
-  "description": "Chat Eazy server, developed by Ayush, for intern application",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ayush-pbh",
-  "license": "MIT",
-  "dependencies": {
-    "drizzle-orm": "^0.33.0",
-    "pg": "^8.12.0"
-  },
-  "devDependencies": {
-    "@types/pg": "^8.11.6",
-    "drizzle-kit": "^0.24.0"
-  }
+    "name": "chateazy-server",
+    "version": "1.0.0",
+    "description": "Chat Eazy server, developed by Ayush, for intern application",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js  "
+    },
+    "author": "Ayush-pbh",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.33.0",
+        "express": "^4.19.2",
+        "pg": "^8.12.0"
+    },
+    "devDependencies": {
+        "@types/pg": "^8.11.6",
+        "drizzle-kit": "^0.24.0",
+        "nodemon": "^3.1.4"
+    }
 }
