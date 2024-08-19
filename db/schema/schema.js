@@ -21,17 +21,8 @@ export const USER = pgTable("USERS", {
 export const CONVERSATIONS = pgTable("CONVERSATIONS", {
     id: uuid("conv_id").defaultRandom().primaryKey(),
     type: varchar("conv_type"),
-    name: varchar("conv_name"),
-});
-
-// USERS_CONVERSATIONS table (join table)
-export const USERS_CONVERSATIONS = pgTable("USERS_CONVERSATIONS", {
-    userId: uuid("user_id")
-        .references(() => USER.id)
-        .notNull(),
-    conversationId: uuid("conversation_id")
-        .references(() => CONVERSATIONS.id)
-        .notNull(),
+    participant1_id: uuid("participant1_id").notNull(),
+    participant2_id: uuid("participant2_id").notNull(),
 });
 
 // MESSAGES table

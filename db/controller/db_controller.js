@@ -17,10 +17,10 @@ const insert = async (model, data) => {
 const select = async (model, filter) => {
     try {
         const selectedEntry = await db.select().from(model).where(filter);
-        console.log("Database Insertion Success ✅");
+        console.log("Database Selection Success ✅");
         return selectedEntry;
     } catch (error) {
-        console.log("Database Selection Failed ❌");
+        console.log("Database Selection Failed ❌", error);
         return false;
     }
 };

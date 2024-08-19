@@ -34,7 +34,6 @@ const loginUser = async (req, res) => {
     try {
         // checking if password is correct.
         const match = await bcrypt.compare(password, db_result.hPassword);
-        console.log(match);
         if (!match) {
             return res.status(405).json({ error: "Password Mismatch." });
         } else {
